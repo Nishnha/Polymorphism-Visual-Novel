@@ -40,10 +40,10 @@ label start:
     
     mc "I guess we'd better go to class."
 
-    return
+    jump inClass
 
 
-label inclass:
+label inClass:
     
     whitlock "Today we're going to learn about polymorphism."
     
@@ -78,17 +78,14 @@ label inclass:
     
     whitlock "I need a volunteer for making these sandwiches."
     
-    #I dont know choices yet
-    #Choice 1: volunteer yourself
-    #Choice 2: Point at Galen and volunteer him
-    
-    return
+    menu: 
+        "volunteer yourself":
+            jump volunteerSelf
+        "Point at Galen and volunteer him":
+            jump volunteerGalen
 
 label hallway:
     
-    
-    
-    return
 
 label obamascene:
     
@@ -111,19 +108,16 @@ label obamascene:
     mc "..."
     
     mc "Thanks Obama."
-
-    return
-    
     
 label conclusion:
     mc "I don't care how you brush your teeth, or how you eat your sandwiches."
     
-    mc "All I care about is that..."
-    
-    #Choices:
-    #Choice 1: I want to play CS:GO with you
-    #Choice 2: You have good hygiene
-    #Choice 3: You're happy
-    #Choice 4: Your memes are as dank as mine
-    #Choice 5: I want to spend the rest of my life with you
-    return
+    mc "I just care that..."
+
+    menu: 
+        "You have good hygiene":
+            jump hygiene
+        "You're happy":
+            jump happy
+
+return #ends game
