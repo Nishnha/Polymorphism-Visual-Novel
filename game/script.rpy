@@ -1,23 +1,21 @@
-﻿# Characters
+﻿# You can place the script of your game in this file.
+{i}{/i}
+# Declare images below this line, using the image statement.
+# eg. image eileen happy = "eileen_happy.png"
+
+# Main characters used by this game.
 define whitlock = Character('Whitlock', color="#c8ffc8")
-image whitlock = Placeholder("girl")
-
-define mc = Character('Mikeadita', color="#FF8000")
-image mc = Placeholder("boy")
-
-define nish = Character('Nishnha', color="#008080")
-image nish = Placeholder("boy")
-
+define mc = Character('Lucky', color="#FF8000")
+define maingirl = Character('Star', color="FF8000")
 define sean = Character('Sean AKA MemeMachine2016', color="#000000")
+define nish = Character('Nishnha', color="#008080")
+define idle = Character(' ',color="#008080")
 
-define girl0 = Character('Nasufiaw', color="#C0C0C0")
+# Side characters
+
+image mc = Placeholder("boy")
 image girl0 = Placeholder("girl")
-
-define girl1 = Character('Nabeel', color="#805000")
-
-define obama = Character('Obama', color="#202020")
-
-define onenugget = Character('One-Nugget', color="#0000FF")
+image nish = Placeholder("boy")
 
 
 # Scenes
@@ -26,11 +24,12 @@ image wheel = "022.JPG"
 
 #################################################################################
 
+# The game starts here.
 label start:
     scene bike
     show whitlock with dissolve
 
-    whitlock "Hello this is a tale of one of my legendary student that went out and found his girl of his dreams from my lesson on polymorphism"
+    whitlock "Hello this is a tale of one of my legendary students that was enlightened by polymorphism"
     whitlock "Please do not copy this project it is completely reserved by the NTG Foundation"
     
     jump opening
@@ -39,84 +38,131 @@ label opening:
     scene wheel with fade
     show mc with dissolve
 
-    mc "Im so jealous of Sean getting all the girls with his memes"
-    "I realized I said that out loud. Everyone turned to me and I tried to pretend I wasn't alive"
+    mc "{i}Im so jealous of Sean getting all the girls with his memes{/i}"
+    mc "{i}Its not that I don't like my relationship now its just too plain and uneventful{/i}" 
+    mc "{i}Simply put I just want to date someone that is interesting and unpredictable!{/i}"
+    mc "{i}Maybe I'll ask Sean for some advice{/i}"
+    mc "Hey Sean .... {i} bell rings and Sean leaves with his crowd of girls {/i} "
+    mc "{i}Sigh better get to class, and hopefully I can squeeze my way into talking with him {/i}"
 
     with dissolve
 
     show mc at right with dissolve
-    show nish at left with dissolve
-    
-    sean "You wot m8?"
-    "Ahhh he heard me"
-    sean "Look, you just have to be polymorphic"
-    mc "..."
-    nish "What does that even mean?"
-    sean "If you paid attention in computer scienece you would know!"
-    mc "I guess we'd better go to class."
 
     jump inClass
 
 label inClass:
-    scene bike
-    show whitlock with dissolve
-
-    whitlock "Today we're going to learn about polymorphism."
+    
+    maingirl "Hello"
+    mc "Hello"
+    mc "{i}Same small talk again{/i}"
+    whitlock"{i}Bell rings{/i} Today we're going to learn about polymorphism."
     whitlock "I'm about to blow your minds."
+    mc "{i}Oh boy is this going to be as mind blowing as 2-D arrays{/i}"
     whitlock "We're making polymorphic sandwiches."
-    
-    show nish at right with moveinright
+    mc "{i} Just what{/i}" 
     nish "Can we eat them afterwards?"
-
     whitlock "I don't think you'll want to."
-
-    show sean at left with moveinleft
     sean "Yeah, instead of jelly we're using the darkness of my soul."
-    
-    hide nish with moveoutright
-    hide sean with moveoutleft
-
     whitlock "Polymorphism is when a variable's type is a super class with multiple sub classes."
     whitlock "The variable can refer to different objects at different times as long as they all extend the super class!"
     whitlock "This way, your code doesn't have to care or know about which subclass it's using. It'll all work the same."
     nish "Can we eat the sandwiches yet?"
     whitlock "We haven't even made them!"
-    mc "I'm so confused..."
-    mc "If that's what polymorphism is, how can a person be polymorphic?"
+    mc "{i}I'm so confused about this...{/i}"
     nish "..."
     nish "What?"
-    whitlock "I need a volunteer for making these sandwiches."
+    whitlock "Let me pick two volunteers to demonstrate this"
+    mc "{i}Ugh I hope its not me{/i}"
+    whitlock "I pick lucky and star for my demonstration"
+    mc "{i}Ugh{/i}"
+    whitlock "Please pick a card for a recipe to follow"
+    
     
     menu: 
-        "volunteer yourself":
-            jump volunteerSelf
-        "Point at Galen and volunteer him":
-            jump volunteerGalen
+        "Pick Left Card":
+            jump leftCard
+        "Pick Right Card":
+            jump rightCard
 
-label hallway:
+label leftCard:
+    whitlock "Read your instructions and proceed to make your sandwiches"
+    mc "{i}What is this just flatbread,pepperjack cheese, and ham? Lets see what star is doing. Only wheat and ham just what's going on here{/i}"
+    whitlock "As you can see lucky and star has made two sandwiches following the instructions on the card"
+    whitlock "If you think of the idea of the sandwich as the variable, and the cards being classes changing the variable in it then you understand polymorphism!"
+    idle "{i}Class crickets{/i}"
+    nish "So now can we just eat the sandwiches"
+    whitlock "........ sure"
+    mc "{i} Huh so that was polymorphism I wish Star would be more polymorphic{/i}
+    mc "{i} Maybe while everyone is eatting I should go talk to star about this{/i}
+    menu:
+        "Go talk to Star"
+        jump Star
+        "Sit idly"
+        jump obamaScene
+label Star:
+    mc "Hey Star I have something that I want to talk to you about"
+    maingirl "???"
+    menu:
+        "Its about us"
+        "Nevermind lets talk about it in the hall"
+        jump hallWay
+    maingirl "???"
+    mc "its just that 
+    menu:
+        "I need private tutoring for polymorphism, because I'm totally lost"
+        idle "{i}Bell Rings{/i}"
+        jump hallWay
+        "I think this thing between you and me won't work out"
+    maingirl "!!!!!!!!!! Why is that!"
+    mc "{i} I'm shocked at how much she's reacting to this{/i}"
+    menu: 
+        "Tell her its a joke and it was fun seeing her reaction"
+        jump badEnding
+        "Tell her that you didn't know she cared so much"
+    jump conclusion
+label hallWay:
     
-
+    mc "Hey Star has life been bland"
+    maingirl "No"
+    mc "I've been thinking if there should be a change between you and me"
+    maingirl "...."
+    mc "It's just that I think you and I won't work out"
+    "!!!!!!!!!! Why is that!"
+    mc "{i} I'm shocked at how much she's reacting to this{/i}"
+    menu: 
+        "Tell her its a joke and it was fun seeing her reaction"
+        jump badEnding
+        "Tell her that you didn't know she cared so much"
+    jump conclusion
+    
+    
 label obamascene:
     
-    mc "It's halfway through the day and I still don't understand how someone can be polymorphic!"
-    mc "What am I going to do Obama?"
+    mc "Sigh I wish Star could just be more polymorphic!"
+    mc "Just what am I going to do Obama?"
     obama "Don't just play on your phone, program it."
     mc "..."
-    mc "I mean about learning about polymorphism!"
+    mc "That doesn't help!"
     obama "Don't just play on your phone, program it."
     mc "But how is programming my phone going to solve my relationship problems?"
     obama "Don't just play on your phone, program it."
     mc "..."
     mc "Thanks Obama."
+    idle "{i}bell rings{/i}
+    jump hallway
     
 label conclusion:
-    mc "I don't care how you brush your teeth, or how you eat your sandwiches."
-    mc "I just care that..."
+    maingirl "!!!!!!!!!!!!!"
+    mc "{i} I didn't know she liked me this much {/i} and he accidently said it outloud"
+    maingirl "Of course, but I didn't know how to talk to you"
+    mc "......"
+    mc "We're both dumb"
+    mc "I guess we can both use some polymorphism on our self class"
 
-    menu: 
-        "You have good hygiene":
-            jump hygiene
-        "You're happy":
-            jump happy
+return #ends game
+label badEnding:
+    mc "The boring relationship carried out until until graduation"
+    mc "Only if she could be changed"
 
 return #ends game
