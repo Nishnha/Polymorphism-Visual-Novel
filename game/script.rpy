@@ -1,21 +1,17 @@
-﻿# You can place the script of your game in this file.
-{i}{/i}
-# Declare images below this line, using the image statement.
-# eg. image eileen happy = "eileen_happy.png"
-
-# Main characters used by this game.
+﻿# Main characters used by this game.
 define whitlock = Character('Whitlock', color="#c8ffc8")
 define mc = Character('Lucky', color="#FF8000")
+image mc = Placeholder("boy")
 define maingirl = Character('Star', color="FF8000")
 define sean = Character('Sean AKA MemeMachine2016', color="#000000")
 define nish = Character('Nishnha', color="#008080")
-define idle = Character(' ',color="#008080")
-int num = 0;
-# Side characters
-
-image mc = Placeholder("boy")
-image girl0 = Placeholder("girl")
 image nish = Placeholder("boy")
+
+# Placeholder Characters
+define girl0 = Character('', color="#FFFFFF")
+image girl0 = Placeholder("girl")
+
+int num = 0;
 
 
 # Scenes
@@ -36,18 +32,25 @@ label start:
 
 label opening:
     scene wheel with fade
-    show mc with dissolve
+
+    show sean at center with dissolve
+    show girl0 at left
+
+    show mc at right with dissolve
 
     mc "{i}Im so jealous of Sean getting all the girls with his memes!{/i}"
     mc "{i}Its not that I don't like my relationship now its just too plain and uneventful.{/i}" 
     mc "{i}Simply put I just want to date someone that is interesting and unpredictable!{/i}"
     mc "{i}Maybe I'll ask Sean for some advice.{/i}"
-    mc "Hey Sean .... {i} bell rings and Sean leaves with his crowd of girls. {/i} "
+    mc "Hey Sean ...."
+    "bell rings and Sean leaves with his crowd of girls."
+
+    hide sean
+    hide girl0
+
     mc "{i}Sigh better get to class, and hopefully I can squeeze my way into talking with him. {/i}"
 
     with dissolve
-
-    show mc at right with dissolve
 
     jump inClass
 
