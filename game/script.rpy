@@ -192,7 +192,7 @@ label obamascene2:
     
 label conclusion:
     maingirl "!!!!!!!!!!!!!"
-    mc "{i} I didn't know she liked me this much {/i} and he accidently said it outloud"
+    mc "I didn't know she liked me this much and he accidently said it outloud"
     maingirl "Of course, but I didn't know how to talk to you"
     mc "......"
     mc "We're both dumb"
