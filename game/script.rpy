@@ -1,23 +1,24 @@
-﻿# You can place the script of your game in this file.
-
-# Declare images below this line, using the image statement.
-# eg. image eileen happy = "eileen_happy.png"
-
-# Main characters used by this game.
+﻿# Characters
 define whitlock = Character('Whitlock', color="#c8ffc8")
+image whitlock = Placeholder("girl")
+
 define mc = Character('Mikeadita', color="#FF8000")
+image mc = Placeholder("boy")
+
 define nish = Character('Nishnha', color="#008080")
+image nish = Placeholder("boy")
+
 define sean = Character('Sean AKA MemeMachine2016', color="#000000")
 
-# Side characters
 define girl0 = Character('Nasufiaw', color="#C0C0C0")
+image girl0 = Placeholder("girl")
+
 define girl1 = Character('Nabeel', color="#805000")
+
 define obama = Character('Obama', color="#202020")
+
 define onenugget = Character('One-Nugget', color="#0000FF")
 
-image mc = Placeholder("boy")
-image girl0 = Placeholder("girl")
-image nish = Placeholder("boy")
 
 # Scenes
 image bike = "092.JPG"
@@ -25,7 +26,6 @@ image wheel = "022.JPG"
 
 #################################################################################
 
-# The game starts here.
 label start:
     scene bike
     show whitlock with dissolve
@@ -39,33 +39,43 @@ label opening:
     scene wheel with fade
     show mc with dissolve
 
-    "Im so jealous of Sean getting all the girls with his memes"
-    mc "I need to date someone and I want them to be super polymorphic!"
-    "I realized I said that out loud. Everyone turned to me and I tried to pretend
-    I wasn't alive"
+    mc "Im so jealous of Sean getting all the girls with his memes"
+    "I realized I said that out loud. Everyone turned to me and I tried to pretend I wasn't alive"
 
     with dissolve
 
     show mc at right with dissolve
     show nish at left with dissolve
     
-    nish "You wot m8?"
-    mc "Ahhhn I want a girl that can be anything of my dreams"
-    mc "I don't know what polymorphism is though!!!"
+    sean "You wot m8?"
+    "Ahhh he heard me"
+    sean "Look, you just have to be polymorphic"
     mc "..."
-    nish "Same."
+    nish "What does that even mean?"
+    sean "If you paid attention in computer scienece you would know!"
     mc "I guess we'd better go to class."
 
     jump inClass
 
 label inClass:
-    
+    scene bike
+    show whitlock with dissolve
+
     whitlock "Today we're going to learn about polymorphism."
     whitlock "I'm about to blow your minds."
     whitlock "We're making polymorphic sandwiches."
+    
+    show nish at right with moveinright
     nish "Can we eat them afterwards?"
+
     whitlock "I don't think you'll want to."
+
+    show sean at left with moveinleft
     sean "Yeah, instead of jelly we're using the darkness of my soul."
+    
+    hide nish with moveoutright
+    hide sean with moveoutleft
+
     whitlock "Polymorphism is when a variable's type is a super class with multiple sub classes."
     whitlock "The variable can refer to different objects at different times as long as they all extend the super class!"
     whitlock "This way, your code doesn't have to care or know about which subclass it's using. It'll all work the same."
