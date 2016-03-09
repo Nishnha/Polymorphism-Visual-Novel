@@ -1,18 +1,20 @@
 ﻿# Main characters used by this game.
 define whitlock = Character('Whitlock', color="#c8ffc8")
+image whitlock = "whitlock.png"
 define mc = Character('Lucky', color="#FF8000")
 image mc = "mc.png"
 define star = Character('Star', color="FF8000")
 image star = "star.png"
 define sean = Character('Meme Slangar', color="#D941B0")
+image sean = im.FactorScale("sean.png", .1)
 define nish = Character('Nishnha', color="#008080")
-image nish = ""
+image nish = "nish.jpg"
 define obama = Character('Obama', color="#8DD941")
 image obama = "obama.jpg"
 
 # Placeholder Characters
 define fangirl = Character('Fangirl', color="#FFFFFF")
-image fangirl = Placeholder("girl")
+image fangirl = im.FactorScale("fangirl.png", .5)
 
 # Scenes
 image classroom = "classroom.jpg"
@@ -34,7 +36,9 @@ label start:
 label opening:
     scene classroom with fade
 
-    show sean at center with dissolve
+    show sean at center with dissolve:
+        yalign .4
+
     show fangirl at left
 
     show mc at right with dissolve
@@ -68,7 +72,9 @@ label inClass:
     "bell rings"
 
     hide star
+    with fade
     show whitlock at center
+    show mc at right with dissolve
 
     whitlock "Today we're going to learn about polymorphism."
     whitlock "I'm about to blow your minds."
@@ -82,13 +88,15 @@ label inClass:
     
     hide nish with moveoutleft
 
+    show sean at left with moveinleft:
+        yalign .4
     sean "Yeah, instead of jelly we're using the darkness of my soul."
-
-    show sean with moveinleft
-
+    
+    show fangirl at left with moveinleft
     fangirl "Sean's so cool"
 
     hide sean with moveoutleft
+    hide fangirl with moveoutleft
 
     mc "{i}Darn it Sean, back at it again with those dank memes!{/i}"
     whitlock "Polymorphism is when a variable's type is a super class with multiple sub classes."
