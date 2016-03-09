@@ -8,7 +8,7 @@ image star = "star.png"
 define sean = Character('Meme Slangar', color="#D941B0")
 image sean = im.FactorScale("sean.png", .1)
 define nish = Character('Nishnha', color="#008080")
-image nish = "nish.jpg"
+image nish = im.FactorScale("nish.png", .8)
 define obama = Character('Obama', color="#8DD941")
 image obama = "obama.jpg"
 
@@ -20,6 +20,7 @@ image fangirl = im.FactorScale("fangirl.png", .5)
 image classroom = "classroom.jpg"
 image hallway = "hallway.jpg"
 image outside = "outside.jpg"
+image code = "code.png"
 
 #################################################################################
 
@@ -101,17 +102,14 @@ label inClass:
     mc "{i}Darn it Sean, back at it again with those dank memes!{/i}"
     whitlock "Polymorphism is when a variable's type is a super class with multiple sub classes."
 
-    scene code1
+    scene code
 
     whitlock "The variable can refer to different objects at different times as long as they all extend the super class!"
-
-    scene code2
-
     whitlock "This way, your code doesn't have to care or know about which subclass it's using. It'll all work the same."
 
-    scene code3
-
     pause
+
+    scene classroom
 
     show nish at left with  moveinleft
     nish "Can we eat the sandwiches yet?"
@@ -185,17 +183,27 @@ label Star:
 label obamaScene1:
     scene classroom
     
+    show mc at left with dissolve
     mc "Sigh I wish Star could just be more polymorphic!"
     mc "Just what am I going to do Obama?"
+
+    show obama at right with moveinright:
+        yalign .4
+        xalign .9
     obama "Don't just play on your phone, program it."
     mc "..."
     mc "That doesn't help!"
+
+    with vpunch
+
     obama "Don't just play on your phone, program it."
     mc "But how is programming my phone going to solve my relationship problems?"
     obama "Don't just play on your phone, program it."
     mc "..."
     mc "Thanks Obama."
     
+    hide obama with moveoutright
+
     "{i}bell rings{/i}"
     
     jump Hallway
@@ -203,16 +211,25 @@ label obamaScene1:
 label obamaScene2:
     scene classroom
     
+    show mc at left with dissolve
     mc "Sigh I wish Star could just be more polymorphic!"
     mc "Just what am I going to do Obama?"
+
+    show obama at right with moveinright:
+        yalign .4
+        xalign .9
+
     obama "..."
     mc "I need to tell her how I feel but I don't know how!"
     obama "..."
     mc "What would you do if you were in my position?"
+    with vpunch
     obama "Don't just play on your phone, program it."
     mc "..."
     mc "Thanks Obama."
     
+    hide obama with moveoutright
+
     "{i}bell rings{/i}"
 
     jump Hallway
@@ -224,7 +241,7 @@ label deepConversation1:
 
     menu:
         "I don't get polymorphism, I'm totally lost! Tutor me please!":
-            jump Hallay
+            jump Hallway
         "I think this thing between you and me won't work out":
             jump deepConversation2
 
