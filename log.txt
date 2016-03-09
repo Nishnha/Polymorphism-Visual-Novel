@@ -1,17 +1,17 @@
-Tue Mar  8 21:55:49 2016
+Tue Mar  8 22:03:57 2016
 Linux-4.4.1-2-ARCH-x86_64-with-glibc2.2.5
 Ren'Py 6.99.8.959
  
 
-Bootstrap to the start of init.init took 0.10s
-Early init took 0.01s
+Bootstrap to the start of init.init took 0.09s
+Early init took 0.02s
 Loader init took 0.01s
 Loading error handling took 0.11s
-Loading script took 1.64s
+Loading script took 1.68s
 Loading persistent took 0.01s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.20s
-Loading analysis data took 0.01s
+Running init code took 0.19s
+Loading analysis data took 0.02s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
 Backing up script files to '/home/nish/.renpy/backups/Polymorphism-Visual-Novel':
@@ -21,13 +21,13 @@ Making clean stores took 0.00s
 DPI scale factor: 1.000000
 Creating interface object took 0.17s
 Cleaning stores took 0.00s
-Init translation took 0.01s
+Init translation took 0.00s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.03s
 Save screen analysis took 0.05s
 Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.05s
 Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
@@ -274,11 +274,11 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 2.89336514473s
+Total time until interface ready: 2.9640789032s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.028609 seconds.
-- Frame drawn at 0.033645 seconds.
-- Frame drawn at 0.050768 seconds.
-- Frame drawn at 0.066725 seconds.
-- 0.066725 seconds to render 5 frames.
+- Frame drawn at 0.028220 seconds.
+- Frame drawn at 0.033509 seconds.
+- Frame drawn at 0.049322 seconds.
+- Frame drawn at 0.065647 seconds.
+- 0.065647 seconds to render 5 frames.

@@ -24,6 +24,16 @@ image code = "code.png"
 
 #################################################################################
 
+# Start screen
+label spashscreen: 
+    scene black
+    with Pause(1)
+    
+    show text "NTG Presents..."
+    with Pause(3)
+    hide text with dissolve
+return
+
 # The game starts here.
 label start:
     scene classroom
@@ -237,6 +247,8 @@ label obamaScene2:
 label deepConversation1:
     scene classroom
 
+    show mc at center with dissolve
+
     mc "its just that "
 
     menu:
@@ -247,6 +259,8 @@ label deepConversation1:
 
 label deepConversation2:
     scene classroom
+
+    show star at left with dissolve
 
     star "!!!!!!!!!!"
     star " Why is that!"
@@ -262,6 +276,8 @@ label deepConversation2:
 label Hallway:
     scene hallway
 
+    show mc at right with dissolve
+    show start at left with dissolve
     mc "Hey Star has life been bland"
     star "No"
     mc "I've been thinking if there should be a change between you and me"
@@ -280,6 +296,8 @@ label Hallway:
 label conclusion:
     scene outside
 
+    show mc at right with dissolve
+    show start at left with dissolve
     star "!!!!!!!!!!!!!"
     mc "I didn't know she liked me this much and he accidently said it outloud"
     star "Of course, but I didn't know how to talk to you"
@@ -287,10 +305,12 @@ label conclusion:
     mc "We're both dumb"
     mc "I guess we can both use some polymorphism on us in ourselves"
 
+return #ends game
 
 label badEnding:
     scene outside
     
+    show mc at center with dissovle
     mc "The boring relationship carried out until until graduation"
     mc "{i}Only if she could be changed{/i}"
 
