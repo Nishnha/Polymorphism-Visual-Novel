@@ -246,7 +246,7 @@ label conclusion:
     star "Of course, but I didn't know how to talk to you"
     mc "......"
     mc "We're both dumb"
-    mc "I guess we can both use some polymorphism on us in our self class"
+    mc "I guess we can both use some polymorphism on us in ourselves"
 
 label badEnding:
     mc "The boring relationship carried out until until graduation"
