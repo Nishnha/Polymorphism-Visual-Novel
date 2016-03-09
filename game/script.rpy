@@ -31,7 +31,8 @@ label start:
 
     whitlock "Hello this is a tale of one of my legendary students that was enlightened by polymorphism."
     whitlock "Please do not copy this project it is completely reserved by the NTG Foundation."
-    play sound "chime.mp3"
+    hide whitlock with dissolve
+   
     
     jump opening
 
@@ -46,25 +47,25 @@ label opening:
     show mc at right with dissolve
 
     mc "{i}Im so jealous of Sean getting all the girls with his memes!{/i}"
-    mc "{i}Its not that I don't like my relationship now its just too plain and uneventful.{/i}" 
-    mc "{i}Simply put I just want to date someone that is interesting and unpredictable!{/i}"
+    mc "{i}Its not that I don't like my relationship; its just too plain and uneventful!{/i}" 
+    mc "{i}Simply put, I just want to date someone that is interesting and unpredictable!{/i}"
     mc "{i}Maybe I'll ask Sean for some advice.{/i}"
     mc "Hey Sean ...."
+
     play sound "chime.mp3"
     "bell rings and Sean leaves with his crowd of girls."
-    Pause(10)
+    pause
 
-    hide sean
-    hide fangirl
+    hide sean with moveoutright
+    hide fangirl with moveoutright
 
     mc "{i}Sigh better get to class, and hopefully I can squeeze my way into talking with him. {/i}"
-
-    with dissolve
 
     jump inClass
 
 label inClass:
-    scene classroom
+    stop sound
+    scene classroom with fade
  
     show mc at right
     show star at left with moveinleft
@@ -75,9 +76,11 @@ label inClass:
 
     "bell rings"
     play sound "chime.mp3"
-    Pause(10)
+    pause
 
     hide star
+    stop sound
+
     with fade
     show whitlock at center
     show mc at right with dissolve
@@ -139,6 +142,7 @@ label inClass:
             jump sandwich
 
 label sandwich:
+    stop sound
     scene classroom
 
     show whitlock with dissolve
@@ -175,6 +179,7 @@ label sandwich:
                 jump obamaScene2
 
 label Star:
+    stop sound
     scene classroom
 
     mc "Hey Star I have something that I want to talk to you about"
@@ -186,6 +191,7 @@ label Star:
             jump Hallway
 
 label obamaScene1:
+    stop sound
     scene classroom
     
     show mc at left with dissolve
@@ -208,11 +214,12 @@ label obamaScene1:
 
     play sound "chime.mp3"
     "{i}bell rings{/i}"
-    Pause(10)
+    pause
     
     jump Hallway
 
 label obamaScene2:
+    stop sound
     scene classroom
     
     show mc at left with dissolve
@@ -234,11 +241,12 @@ label obamaScene2:
 
     play sound "chime.mp3"
     "{i}bell rings{/i}"
-    Pause(10)
+    pause
 
     jump Hallway
 
 label deepConversation1:
+    stop sound
     scene classroom
 
     show mc at center with dissolve
@@ -252,6 +260,7 @@ label deepConversation1:
             jump deepConversation2
 
 label deepConversation2:
+    stop sound
     scene classroom
 
     show star at left with dissolve
@@ -268,6 +277,7 @@ label deepConversation2:
             jump conclusion
 
 label Hallway:
+    stop sound
     scene hallway
 
     show mc at right with dissolve
@@ -291,7 +301,7 @@ label conclusion:
     scene outside
 
     show mc at right with dissolve
-    show start at left with dissolve
+    show star at left with dissolve
     star "!!!!!!!!!!!!!"
     mc "I didn't know she liked me this much and he accidently said it outloud"
     star "Of course, but I didn't know how to talk to you"
