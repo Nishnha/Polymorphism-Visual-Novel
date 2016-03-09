@@ -1,26 +1,29 @@
 ﻿# Main characters used by this game.
 define whitlock = Character('Whitlock', color="#c8ffc8")
 define mc = Character('Lucky', color="#FF8000")
-image mc = Placeholder("boy")
+image mc = "mc.png"
 define star = Character('Star', color="FF8000")
+image star = "star.png"
 define sean = Character('Meme Slangar', color="#D941B0")
 define nish = Character('Nishnha', color="#008080")
-image nish = Placeholder("boy")
+image nish = ""
 define obama = Character('Obama', color="#8DD941")
+image obama = "obama.jpg"
 
 # Placeholder Characters
 define fangirl = Character('Fangirl', color="#FFFFFF")
 image fangirl = Placeholder("girl")
 
 # Scenes
-image bike = "092.JPG"
-image wheel = "022.JPG"
+image classroom = "classroom.jpg"
+image hallway = "hallway.jpg"
+image outside = "outside.jpg"
 
 #################################################################################
 
 # The game starts here.
 label start:
-    scene bike
+    scene classroom
     show whitlock with dissolve
 
     whitlock "Hello this is a tale of one of my legendary students that was enlightened by polymorphism."
@@ -29,7 +32,7 @@ label start:
     jump opening
 
 label opening:
-    scene wheel with fade
+    scene classroom with fade
 
     show sean at center with dissolve
     show fangirl at left
@@ -53,6 +56,7 @@ label opening:
     jump inClass
 
 label inClass:
+    scene classroom
  
     show mc at right
     show star at left with moveinleft
@@ -124,7 +128,7 @@ label inClass:
             jump sandwich
 
 label sandwich:
-    scene sandwich
+    scene classroom
 
     show whitlock with dissolve
     whitlock "Read your instructions and proceed to make your sandwiches"
@@ -171,6 +175,7 @@ label Star:
             jump Hallway
 
 label obamaScene1:
+    scene classroom
     
     mc "Sigh I wish Star could just be more polymorphic!"
     mc "Just what am I going to do Obama?"
@@ -188,6 +193,7 @@ label obamaScene1:
     jump Hallway
 
 label obamaScene2:
+    scene classroom
     
     mc "Sigh I wish Star could just be more polymorphic!"
     mc "Just what am I going to do Obama?"
@@ -204,6 +210,8 @@ label obamaScene2:
     jump Hallway
 
 label deepConversation1:
+    scene classroom
+
     mc "its just that "
 
     menu:
@@ -213,6 +221,8 @@ label deepConversation1:
             jump deepConversation2
 
 label deepConversation2:
+    scene classroom
+
     star "!!!!!!!!!!"
     star " Why is that!"
 
@@ -225,6 +235,8 @@ label deepConversation2:
             jump conclusion
 
 label Hallway:
+    scene hallway
+
     mc "Hey Star has life been bland"
     star "No"
     mc "I've been thinking if there should be a change between you and me"
@@ -241,14 +253,17 @@ label Hallway:
             jump conclusion
     
 label conclusion:
+    scene outside
+
     star "!!!!!!!!!!!!!"
     mc "I didn't know she liked me this much and he accidently said it outloud"
     star "Of course, but I didn't know how to talk to you"
     mc "......"
     mc "We're both dumb"
-    mc "I guess we can both use some polymorphism on us in our self class"
 
 label badEnding:
+    scene outside
+    
     mc "The boring relationship carried out until until graduation"
     mc "{i}Only if she could be changed{/i}"
 
