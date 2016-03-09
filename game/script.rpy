@@ -31,6 +31,7 @@ label start:
 
     whitlock "Hello this is a tale of one of my legendary students that was enlightened by polymorphism."
     whitlock "Please do not copy this project it is completely reserved by the NTG Foundation."
+    play sound "chime.mp3"
     
     jump opening
 
@@ -49,7 +50,9 @@ label opening:
     mc "{i}Simply put I just want to date someone that is interesting and unpredictable!{/i}"
     mc "{i}Maybe I'll ask Sean for some advice.{/i}"
     mc "Hey Sean ...."
+    play sound "chime.mp3"
     "bell rings and Sean leaves with his crowd of girls."
+    Pause(10)
 
     hide sean
     hide fangirl
@@ -71,6 +74,8 @@ label inClass:
     mc "{i}Same small talk again{/i}"
 
     "bell rings"
+    play sound "chime.mp3"
+    Pause(10)
 
     hide star
     with fade
@@ -201,7 +206,9 @@ label obamaScene1:
     
     hide obama with moveoutright
 
+    play sound "chime.mp3"
     "{i}bell rings{/i}"
+    Pause(10)
     
     jump Hallway
 
@@ -225,7 +232,9 @@ label obamaScene2:
     
     hide obama with moveoutright
 
+    play sound "chime.mp3"
     "{i}bell rings{/i}"
+    Pause(10)
 
     jump Hallway
 
