@@ -288,8 +288,7 @@ label conclusion:
     star "Of course, but I didn't know how to talk to you"
     mc "......"
     mc "We're both dumb"
-    mc "I guess we can both use some polymorphism on us in ourselves"
-
+    mc "I guess we can both use some polymorphism in our lives"
 return #ends game
 
 label badEnding:
@@ -298,5 +297,4 @@ label badEnding:
     show mc at center with dissolve
     mc "The boring relationship carried out until until graduation"
     mc "{i}If only she could be changed{/i}"
-
 return #ends game
