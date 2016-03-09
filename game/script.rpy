@@ -24,16 +24,6 @@ image code = "code.png"
 
 #################################################################################
 
-# Start screen
-label spashscreen: 
-    scene black
-    with Pause(1)
-    
-    show text "NTG Presents..."
-    with Pause(3)
-    hide text with dissolve
-return
-
 # The game starts here.
 label start:
     scene classroom
@@ -203,10 +193,7 @@ label obamaScene1:
     obama "Don't just play on your phone, program it."
     mc "..."
     mc "That doesn't help!"
-
-    with vpunch
-
-    obama "Don't just play on your phone, program it."
+    obama "Don't just play on your phone, program it." with vpunch
     mc "But how is programming my phone going to solve my relationship problems?"
     obama "Don't just play on your phone, program it."
     mc "..."
@@ -228,13 +215,11 @@ label obamaScene2:
     show obama at right with moveinright:
         yalign .4
         xalign .9
-
     obama "..."
     mc "I need to tell her how I feel but I don't know how!"
     obama "..."
     mc "What would you do if you were in my position?"
-    with vpunch
-    obama "Don't just play on your phone, program it."
+    obama "Don't just play on your phone, program it." with vpunch
     mc "..."
     mc "Thanks Obama."
     
@@ -277,7 +262,7 @@ label Hallway:
     scene hallway
 
     show mc at right with dissolve
-    show start at left with dissolve
+    show star at left with dissolve
     mc "Hey Star has life been bland"
     star "No"
     mc "I've been thinking if there should be a change between you and me"
@@ -310,8 +295,8 @@ return #ends game
 label badEnding:
     scene outside
     
-    show mc at center with dissovle
+    show mc at center with dissolve
     mc "The boring relationship carried out until until graduation"
-    mc "{i}Only if she could be changed{/i}"
+    mc "{i}If only she could be changed{/i}"
 
 return #ends game
